@@ -31,7 +31,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     volumes:
-      - ${LOCAL_DATABASE}:/var/lib/postgresql/data
+      - analysis_db:/var/lib/postgresql/data
       - ./data:/docker-entrypoint-initdb.d/
 ## Only if you want to connect to  db and don't have a db inspector 
   pgadmin-aq:
@@ -42,3 +42,5 @@ services:
       PGADMIN_DEFAULT_PASSWORD: "PgAdmin2019!"
     ports:
       - "16543:80"
+volumes:
+  analysis_db:

@@ -1,0 +1,9 @@
+
+### get points water_stress
+https://wri-rw.carto.com/api/v2/sql?q=SELECT * FROM get_aqpoints_projected_04('[0]','2030','''future_value''', '''water_stress''', '''optimistic''', '[''Point(-120.9375 54.470037613)'']', '[''Location 1'']', '[''-'']', '[''-'']')
+
+### get points water_depletion
+https://wri-rw.carto.com/api/v2/sql?q=SELECT * FROM get_aqpoints_projected_04('[0]','2030','''future_value''', '''water_depletion''', '''optimistic''', '[''Point(-120.9375 54.470037613)'']', '[''Location 1'']', '[''-'']', '[''-'']')
+  
+### get points water depletion table
+https://wri-rw.carto.com/api/v2/sql?q=select * from water_risk_indicators_future_aqueduct40 WHERE year = 2030 and type = 'future_value'and indicator = 'water_depletion'and scenario = 'optimistic' and pfaf_id = 713460
